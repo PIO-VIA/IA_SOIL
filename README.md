@@ -52,7 +52,9 @@ To set up the environment and run this project, follow these steps:
 
 The trained model is saved as `random_forest_crop_model.pkl` and the scaler as `scaler.pkl`. You can load these files to make predictions on new data.
 
-Example of how to load the model and make a prediction:
+### Command-Line Prediction
+
+Example of how to load the model and make a prediction in a Python script:
 
 ```python
 import joblib
@@ -74,4 +76,21 @@ prediction = model.predict(new_data_scaled)
 
 print(f"The recommended crop is: {prediction[0]}")
 ```
+
+### Graphical User Interface (GUI)
+
+This project includes a simple graphical user interface built with Tkinter. To run the GUI, execute the following command:
+
+```bash
+python app.py
+```
+
+The application window will allow you to input the soil and environmental features. Clicking the "Predict Crop" button will display the recommended crop based on the model's prediction.
+
+**Note on Tkinter:**
+If you are running on a Debian-based Linux distribution (like Ubuntu) and encounter a `ModuleNotFoundError` for `tkinter`, you can install it using the following command:
+```bash
+sudo apt-get install -y python3-tk
+```
+
 
